@@ -2,6 +2,8 @@ import "@/styles/globals.css";
 import type { Metadata } from 'next';
 import { Providers } from "./providers";
 import { fontSans } from '@/config/fonts';
+import { HeaderWrapper } from '@/components/header'
+import { FooterWrapper } from "@/components/footer";
 import clsx from "clsx";
 
 export const metadata: Metadata = {
@@ -16,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx("font-sans antialiased", fontSans.className)}>
+      <body className={"max-h-full w-full " + clsx("font-sans antialiased", fontSans.className)}>
+        <HeaderWrapper />
         <Providers>
           {children}
         </Providers>
+        <FooterWrapper />
       </body>
     </html>
   )
