@@ -1,5 +1,5 @@
 import React from 'react';
-import {Content} from '@/components/details/content';
+import {Content} from '@/components/transactions/content';
 
 const accounts = () => {
    return <Content />;
